@@ -5,27 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=c, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        const shareData = {
-            title: 'MDN',
-            text: 'Learn web development on MDN!',
-            url: 'https://developer.mozilla.org'
-        }
-
-        const btn = document.querySelector('button');
-        const resultPara = document.querySelector('.result');
-
-        // Совместное использование должно запускаться "активацией пользователя"
-        btn.addEventListener('click', async () => {
-            console.log("it's work")
-            try {
-                await navigator.share(shareData)
-                resultPara.textContent = 'MDN shared successfully'
-            } catch(err) {
-                resultPara.textContent = 'Error: ' + err
-            }
-        });
-    </script>
     <style>
         .result {
             border: 1px solid red;
@@ -37,5 +16,9 @@
 <body>
     <p><button>Share MDN!</button></p>
     <p class="result"></p>
+
+
+    
+    <script src="script.js"></script>
 </body>
 </html>
